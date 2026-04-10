@@ -6,9 +6,9 @@ public class Calculator {
     public static void main(String[] args) {
        Scanner userInput= new Scanner(System.in);
        //how can I add more than just 2 numbers without writing 20+ extra lines?
-       System.out.print("eneter first number");
+       System.out.print("eneter first number: ");
        double num1 = userInput.nextInt();
-       System.out.print("enter second number");
+       System.out.print("enter second number: ");
 
        //what do we want to do with these 2 numbers?
         // how do I go about adding a call to a specific calculation
@@ -17,28 +17,31 @@ public class Calculator {
         // double also works but why?
         //user enters calculation function *,+,-,%
 
-        System.out.println("\t*");
-        System.out.println("\t -");
-        System.out.println("\t +");
-        System.out.println("\t /");
+        System.out.println("\t a");
+        System.out.println("\t s");
+        System.out.println("\t m");
+        System.out.println("\t d");
+
 
         System.out.print("select math function ");
+        userInput.nextLine();
         switch (userInput.nextLine()) {
-            case "*":
-                System.out.print("your answer is" + (num1 * num2));
+            case "a":
+                System.out.print("your answer is " + (num1 * num2));
             break;
-            case "-":
-                System.out.print("your answer is" + (num1 - num2));
+            case "s":
+                System.out.print("your answer is " + (num1 - num2));
             break;
-            case "+":
-                System.out.print ("your answer is" + (num1 + num2));
+            case "m":
+                System.out.print ("your answer is " + (num1 + num2));
             break;
-            case  "/":
-                System.out.print("your answer is" +(num1 / num2));
+            case  "d":
+                System.out.print("your answer is " +(num1 / num2));
             break;
 
         }
-        System.out.print("press any key to continue");
+        System.out.println();
+        System.out.println();
 
     //the program should take the users input of a calculation and run the function
        //could do if statements to call upon a specific function
